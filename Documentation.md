@@ -10,6 +10,7 @@ This command creates an SSH keypair located in ```/home/<username>/.ssh```.
 ls -la ~/
 ```
 The dot in front of the folder means it is a hidden folder. If we want to see it, we use ```ls -la```.
+
 The ```~``` signifies the ```/home/<username>``` directory.
 
 ```shell=
@@ -41,6 +42,7 @@ The # are the default settings, so we're going change these settings to:
 - ```PasswordAuthentication no```
 
 Remove the # and save the file after editting.
+
 Then run ```sudo systemctl restart sshd``` to restart the SSH daemon for the changes to take effect.
 
 ## Installing Syncthing
@@ -112,6 +114,7 @@ Activating the firewall for the first time turns on 2 default rules:
 These two rules are the baseline of ufw, and it allows finer control of what type of traffic you want the server to accept.
 
 The only rule we are going to add is ```sudo ufw allow ssh```.
+
 We are only going to allow SSH traffic to our server, since that is the only connection it needs.
 
 ### Useful ufw commands
@@ -119,4 +122,5 @@ We are only going to allow SSH traffic to our server, since that is the only con
 
 There are a 2 ways to delete firewall rules:
 ```sudo ufw status numbered```, then```sudo ufw delete <#>``` to delete a specific rule
+
 ```sudo ufw delete allow 22```
