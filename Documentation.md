@@ -69,7 +69,9 @@ sudo systemctl start syncthing@syncthing.service
 ```
 
 ```sudo systemctl enable syncthing@syncthing.service``` will start Syncthing on bootup.
+
 ```sudo systemctl status syncthing@syncthing.service``` will show us it's current status.
+
 ```sudo systemctl start syncthing@syncthing.service``` will start Syncthing.
 
 [image 3] or [image 2-3]
@@ -89,8 +91,11 @@ ssh -L <listening port>:<remote IP address>:<remote port> <remote username>@<rem
 ```
 
 ```-L```: local port forwarding
+
 ```<listening port>```: the port you will be listening on, on your HOST machine
+
 ```<remote IP address>```: IP of what you want to remote into
+
 ```<remote port>```: remote port that you want to tunnel into the listening port 
 
 
@@ -103,8 +108,11 @@ sudo ufw allow ssh
 The last thing we want to do is enable our firewall. This allows our server to be secure from unwanted connections.
 
 ```sudo apt install ufw``` if it isn't installed.
+
 ```sudo ufw enable``` activates the firewall.
+
 ```sudo ufw status``` shows us our firewall rules.
+
 ```sudo ufw status vebose``` gives us more details.
 
 Activating the firewall for the first time turns on 2 default rules:
@@ -121,6 +129,7 @@ We are only going to allow SSH traffic to our server, since that is the only con
 ```sudo ufw deny <port>``` to deny a port
 
 There are a 2 ways to delete firewall rules:
+
 ```sudo ufw status numbered```, then```sudo ufw delete <#>``` to delete a specific rule
 
 ```sudo ufw delete allow 22```
