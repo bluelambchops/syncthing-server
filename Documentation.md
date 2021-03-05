@@ -118,7 +118,7 @@ Activating the firewall for the first time turns on 2 default rules:
 
 These two rules are the baseline of ufw, and it allows finer control of what type of traffic you want the server to accept.
 
-The only rule we are going to add is ```sudo ufw allow ssh```, since that is the only connection it needs.
+We are going to add ```sudo ufw allow ssh```, since that is the only incoming traffic our server should be expecting.
 
 ### Useful ufw commands
 ```sudo ufw deny <port>``` to deny a port
