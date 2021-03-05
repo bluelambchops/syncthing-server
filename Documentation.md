@@ -51,6 +51,7 @@ sudo apt update
 sudo apt install syncthing
 ```
 ```sudo apt update``` refreshes our repository aka our "playstore" for the latest apps.
+
 ```sudo apt install syncthing``` installs the package aka app "syncthing" from our "playstore".
 
 ## Adding a User to Run the Syncthing Service
@@ -59,8 +60,6 @@ We want to add a seperate user to run this service because of the defense in dep
 sudo adduser syncthing
 ```
 There is going to be a prompt asking for this new user's password. You can skip the user information section.
-
-[image 1]
 
 ## Starting Syncthing
 ```shell=
@@ -73,8 +72,6 @@ sudo systemctl start syncthing@syncthing.service
 ```sudo systemctl status syncthing@syncthing.service``` will show us it's current status.
 
 ```sudo systemctl start syncthing@syncthing.service``` will start Syncthing.
-
-[image 3] or [image 2-3]
 
 ## Connecting Other Devices to the Server
 Since we are running Syncthing on a server, our GUI that would've been normally accessible over a web browser won't work.
@@ -121,15 +118,13 @@ Activating the firewall for the first time turns on 2 default rules:
 
 These two rules are the baseline of ufw, and it allows finer control of what type of traffic you want the server to accept.
 
-The only rule we are going to add is ```sudo ufw allow ssh```.
-
-We are only going to allow SSH traffic to our server, since that is the only connection it needs.
+The only rule we are going to add is ```sudo ufw allow ssh```, since that is the only connection it needs.
 
 ### Useful ufw commands
 ```sudo ufw deny <port>``` to deny a port
 
 There are a 2 ways to delete firewall rules:
 
-```sudo ufw status numbered```, then```sudo ufw delete <#>``` to delete a specific rule
+```sudo ufw status numbered```, then ```sudo ufw delete <#>``` to delete a specific rule
 
 ```sudo ufw delete allow 22```
