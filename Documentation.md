@@ -80,7 +80,7 @@ There are 2 ways to make our server work:
 1. Allow Syncthing to listen on 0.0.0.0
 2. SSH tunneling
 
-The second way is SSH tunneling. This is the preferred method, because our web GUI isn't going to be out in the open. Only devices that *can* SSH into the server can access the web GUI for configuration.
+SSH tunneling is the preferred method, because our web GUI isn't going to be out in the open. We already turned on public key authentication, so only devices that *can* SSH into the server can access the web GUI for configuration.
 
 On your local machine:
 ```shell=
